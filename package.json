@@ -1,0 +1,13 @@
+{
+  "name": "com.smokyooowizard.installergenerator2",
+  "version": "1.0.0",
+  "displayName": "Entitas.InstallerGenerator2",
+  "unity": "2019.1",
+  "author": {
+    "name": "Smoky Wizard",
+    "email": "smoky-santa-claus@yandex.ru"
+  },
+  "dependencies": {
+	  "com.svermeulen.extenject": "9.2.0-stcf3"
+  }
+}

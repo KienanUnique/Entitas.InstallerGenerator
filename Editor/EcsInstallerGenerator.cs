@@ -77,7 +77,7 @@ namespace Entitas.InstallerGenerator2.Editor
                 var attribute = type.GetCustomAttribute(typeof(AInstallAttribute), false) as AInstallAttribute;
                 var isDebug = type.HasAttribute<DebugSystemAttribute>();
 
-                var featureType = attribute!.Type;
+                var featureType = attribute!.FeatureType;
 
                 if (!ecsInstallers.Exists(i => i.Type.GetType() == featureType.GetType()))
                 {
@@ -102,6 +102,13 @@ namespace Entitas.InstallerGenerator2.Editor
                     installerTemplate.Container[attribute.Priority].Add(new(type, attribute, isDebug));
 
                     installerTemplate.Namespaces.Add(type.Namespace);
+                    
+                    installerTemplate.Namespaces.Add(attribute.FeatureType.GetType().Namespace);
+                    installerTemplate.Namespaces.Add(attribute.Priority.GetType().Namespace);
+                    foreach (var feature in attribute.Features)
+                    {
+                        installerTemplate.Namespaces.Add(feature.GetType().Namespace);
+                    }
                 }
             }
 

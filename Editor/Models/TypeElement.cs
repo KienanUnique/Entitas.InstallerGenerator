@@ -6,15 +6,19 @@ namespace Entitas.InstallerGenerator2.Editor.Models
 	public class TypeElement
 	{
 		public readonly Type Type;
+		public readonly Enum FeatureType;
+		public readonly Enum Priority;
 		public readonly int Order;
-		public readonly string Name;
+		public readonly Enum[] Features;
 		public readonly bool IsDebug;
 
 		public TypeElement(Type type, AInstallAttribute attribute, bool isDebug)
 		{
 			Type = type;
+			FeatureType = attribute.FeatureType;
+			Priority = attribute.Priority;
 			Order = attribute.Order;
-			Name = string.Join("|", attribute.Features);
+			Features = attribute.Features;
 			IsDebug = isDebug;
 		}
 	}

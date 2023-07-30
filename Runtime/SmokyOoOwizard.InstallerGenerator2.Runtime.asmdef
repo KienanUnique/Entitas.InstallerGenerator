@@ -1,10 +1,8 @@
 {
     "name": "InstallerGenerator2.Runtime",
-    "rootNamespace": "Entitas.InstallerGenerator2",
+    "rootNamespace": "",
     "references": [],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

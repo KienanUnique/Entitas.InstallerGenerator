@@ -1,6 +1,5 @@
 {
     "name": "InstallerGenerator2.Editor",
-    "rootNamespace": "Entitas.InstallerGenerator2",
     "references": ["GUID:61415c345a1f4d7d9e2be80c3be82cc8"],
     "includePlatforms": [
         "Editor"

@@ -7,8 +7,8 @@ namespace Entitas.InstallerGenerator2.Impl
     {
         [Inject] private T _system;
 
-        public object System => _system;
-        T ISystemInstaller<T>.System => _system;
+        object ISystemInstaller.System => _system;
+        public T System => _system;
 
         public Enum Type { get; }
         public Enum Priority { get; }

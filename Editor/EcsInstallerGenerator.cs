@@ -91,7 +91,7 @@ namespace Entitas.InstallerGenerator2.Editor
 
                 foreach (var installerTemplate in ecsInstallers.Where(i => i.Type.GetType() == featureType.GetType()))
                 {
-                    if (!featureType.HasFlag(installerTemplate.Type))
+                    if (!featureType.Equals(installerTemplate.Type))
                         continue;
 
                     installerTemplate.Counter++;

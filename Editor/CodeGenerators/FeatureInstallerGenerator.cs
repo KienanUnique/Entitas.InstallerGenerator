@@ -33,7 +33,7 @@ namespace Ecs.Generated.Installers
 {{
 	public static class {name} 
     {{
-		public static void Install(DiContainer container, bool isDebug = true)
+		public static void Install(DiContainer container, bool isDebug = false)
         {{
 {methods}
 		}}

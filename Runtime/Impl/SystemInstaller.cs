@@ -7,6 +7,8 @@ namespace Entitas.InstallerGenerator2.Impl
     {
         [Inject] private T _system;
 
+        public string Name => typeof(T).FullName;
+        
         object ISystemInstaller.System => _system;
         public T System => _system;
 
